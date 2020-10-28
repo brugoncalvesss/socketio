@@ -9,16 +9,31 @@
 </head>
 <body>
 
-    <div>
+    <section class="chat">
+        <div class="chat-body">
 
-        <form id="chat">
-            <input type="text" name="username" placeholder="Username">
-            <input type="text" name="message" placeholder="Message">
-            <button type="submit">Enviar</button>
-            <div id="messages"></div>
-        </form>
+            <div class="chat-content">
+                <div class="container">
+                    <div id="messages">
 
-    </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="chat-footer">
+                <div class="container">
+                    <form id="chat" method="POST" class="form-inline" autocomplete="off">
+                        <input type="hidden" name="username">
+                        <div class="input-group">
+                            <input type="text" name="message" class="form-input form-input-borderless" placeholder="Type your message...">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
     <script src="script.js"></script>
